@@ -9,18 +9,18 @@ import {
   ref,
 } from "vue";
 
-import { render } from "@src/functions/layer";
-import { rectangleProps, setupRectangle } from "@src/functions/rectangle";
+import { render } from "@/functions/layer";
+import { rectangleProps, setupRectangle } from "@/functions/rectangle";
 import {
   AddLayerInjection,
   UseGlobalLeafletInjection,
-} from "@src/types/injectionKeys";
+} from "@/types/injectionKeys";
 import {
   WINDOW_OR_GLOBAL,
   assertInject,
   propsBinder,
   remapEvents,
-} from "@src/utils.js";
+} from "@/utils.js";
 
 /**
  * Rectangle component, lets you add and customize rectangular regions on the map

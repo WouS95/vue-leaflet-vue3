@@ -1,11 +1,8 @@
 <template>
   <div style="width: 100%; height: 100%">
     <l-map ref="map" v-model:zoom="zoom" :center="[47.41322, -1.219482]">
-      <l-tile-layer
-        url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-        layer-type="base"
-        name="OpenStreetMap"
-      ></l-tile-layer>
+      <l-tile-layer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" layer-type="base"
+        name="OpenStreetMap"></l-tile-layer>
 
       <l-marker :lat-lng="[47.41322, -1.219482]">
         <l-icon :icon-url="iconUrl" :icon-size="iconSize" />
@@ -29,7 +26,7 @@
 <script lang="ts">
 import type L from "leaflet";
 
-import { LIcon, LMap, LMarker, LTileLayer } from "@src/components";
+import { LIcon, LMap, LMarker, LTileLayer } from "@/components";
 
 export default {
   components: {

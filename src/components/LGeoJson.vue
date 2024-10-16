@@ -9,18 +9,18 @@ import {
   ref,
 } from "vue";
 
-import { geoJSONProps, setupGeoJSON } from "@src/functions/geoJSON";
-import { render } from "@src/functions/layer";
+import { geoJSONProps, setupGeoJSON } from "@/functions/geoJSON";
+import { render } from "@/functions/layer";
 import {
   AddLayerInjection,
   UseGlobalLeafletInjection,
-} from "@src/types/injectionKeys";
+} from "@/types/injectionKeys";
 import {
   WINDOW_OR_GLOBAL,
   assertInject,
   propsBinder,
   remapEvents,
-} from "@src/utils.js";
+} from "@/utils.js";
 
 export default defineComponent({
   props: geoJSONProps,

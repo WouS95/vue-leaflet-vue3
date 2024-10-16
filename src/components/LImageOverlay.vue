@@ -12,18 +12,18 @@ import {
 import {
   imageOverlayProps,
   setupImageOverlay,
-} from "@src/functions/imageOverlay";
-import { render } from "@src/functions/layer";
+} from "@/functions/imageOverlay";
+import { render } from "@/functions/layer";
 import {
   AddLayerInjection,
   UseGlobalLeafletInjection,
-} from "@src/types/injectionKeys";
+} from "@/types/injectionKeys";
 import {
   WINDOW_OR_GLOBAL,
   assertInject,
   propsBinder,
   remapEvents,
-} from "@src/utils.js";
+} from "@/utils.js";
 
 /**
  * ImageOverlay component, render a plain image instead of a geospatial map.

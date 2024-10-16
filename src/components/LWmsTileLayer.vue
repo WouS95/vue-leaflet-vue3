@@ -12,17 +12,17 @@ import {
 import {
   setupWMSTileLayer,
   wmsTileLayerProps,
-} from "@src/functions/wmsTileLayer";
+} from "@/functions/wmsTileLayer";
 import {
   AddLayerInjection,
   UseGlobalLeafletInjection,
-} from "@src/types/injectionKeys";
+} from "@/types/injectionKeys";
 import {
   WINDOW_OR_GLOBAL,
   assertInject,
   propsBinder,
   remapEvents,
-} from "@src/utils.js";
+} from "@/utils.js";
 
 export default defineComponent({
   props: wmsTileLayerProps,

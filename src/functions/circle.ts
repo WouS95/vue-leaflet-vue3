@@ -1,8 +1,9 @@
 import type L from "leaflet";
 
-import { propsToLeafletOptions } from "@src/utils";
+// import { propsToLeafletOptions } from "@/utils";
 
 import { circleMarkerProps, setupCircleMarker } from "./circleMarker";
+import { propsToLeafletOptions } from "@/utils";
 
 export const circleProps = {
   ...circleMarkerProps,
@@ -22,7 +23,7 @@ export const setupCircle = (props, leafletRef, context) => {
   const options = propsToLeafletOptions<L.CircleOptions>(
     props,
     circleProps,
-    circleMarkerOptions
+    circleMarkerOptions,
   );
 
   const methods = {

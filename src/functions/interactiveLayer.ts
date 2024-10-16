@@ -1,6 +1,6 @@
 import type L from "leaflet";
 
-import { propsToLeafletOptions } from "@src/utils";
+import { propsToLeafletOptions } from "@/utils";
 
 import { layerProps, setupLayer } from "./layer";
 
@@ -20,13 +20,13 @@ export const setupInteractiveLayer = (props, leafletRef, context) => {
   const { options: layerOptions, methods } = setupLayer(
     props,
     leafletRef,
-    context
+    context,
   );
 
   const options = propsToLeafletOptions<L.InteractiveLayerOptions>(
     props,
     interactiveLayerProps,
-    layerOptions
+    layerOptions,
   );
 
   return { options, methods };

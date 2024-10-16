@@ -9,17 +9,17 @@ import {
   ref,
 } from "vue";
 
-import { setupTileLayer, tileLayerProps } from "@src/functions/tileLayer";
+import { setupTileLayer, tileLayerProps } from "@/functions/tileLayer";
 import {
   AddLayerInjection,
   UseGlobalLeafletInjection,
-} from "@src/types/injectionKeys";
+} from "@/types/injectionKeys";
 import {
   WINDOW_OR_GLOBAL,
   assertInject,
   propsBinder,
   remapEvents,
-} from "@src/utils.js";
+} from "@/utils.js";
 
 export default defineComponent({
   props: tileLayerProps,

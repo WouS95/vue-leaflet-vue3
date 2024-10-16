@@ -9,18 +9,18 @@ import {
   ref,
 } from "vue";
 
-import { render } from "@src/functions/layer";
-import { polygonProps, setupPolygon } from "@src/functions/polygon";
+import { render } from "@/functions/layer";
+import { polygonProps, setupPolygon } from "@/functions/polygon";
 import {
   AddLayerInjection,
   UseGlobalLeafletInjection,
-} from "@src/types/injectionKeys";
+} from "@/types/injectionKeys";
 import {
   WINDOW_OR_GLOBAL,
   assertInject,
   propsBinder,
   remapEvents,
-} from "@src/utils.js";
+} from "@/utils.js";
 
 /**
  * Polygon component, lets you add and customize polygon regions on the map

@@ -10,19 +10,19 @@ import {
   ref,
 } from "vue";
 
-import { render } from "@src/functions/popper";
-import { popupProps, setupPopup } from "@src/functions/popup";
+import { render } from "@/functions/popper";
+import { popupProps, setupPopup } from "@/functions/popup";
 import {
   BindPopupInjection,
   UnbindPopupInjection,
   UseGlobalLeafletInjection,
-} from "@src/types/injectionKeys";
+} from "@/types/injectionKeys";
 import {
   WINDOW_OR_GLOBAL,
   assertInject,
   propsBinder,
   remapEvents,
-} from "@src/utils.js";
+} from "@/utils.js";
 
 /**
  * Display a popup on the map

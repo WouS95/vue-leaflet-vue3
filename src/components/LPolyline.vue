@@ -9,18 +9,18 @@ import {
   ref,
 } from "vue";
 
-import { render } from "@src/functions/layer";
-import { polylineProps, setupPolyline } from "@src/functions/polyline";
+import { render } from "@/functions/layer";
+import { polylineProps, setupPolyline } from "@/functions/polyline";
 import {
   AddLayerInjection,
   UseGlobalLeafletInjection,
-} from "@src/types/injectionKeys";
+} from "@/types/injectionKeys";
 import {
   WINDOW_OR_GLOBAL,
   assertInject,
   propsBinder,
   remapEvents,
-} from "@src/utils.js";
+} from "@/utils.js";
 
 /**
  * Polyline component, lets you add and personalize polylines on the map

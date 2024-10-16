@@ -2,7 +2,7 @@ import type L from "leaflet";
 import { type PropType, onUnmounted } from "vue";
 import { type VNode, h, render } from "vue";
 
-import { propsToLeafletOptions } from "@src/utils";
+import { propsToLeafletOptions } from "@/utils";
 
 import { layerProps, setupLayer } from "./layer";
 
@@ -40,13 +40,13 @@ export const setupGridLayer = (props, leafletRef, context) => {
   const { options: layerOptions, methods: layerMethods } = setupLayer(
     props,
     leafletRef,
-    context
+    context,
   );
 
   const options = propsToLeafletOptions<L.GridLayerOptions>(
     props,
     gridLayerProps,
-    layerOptions
+    layerOptions,
   );
 
   const methods = {
@@ -67,7 +67,7 @@ export const CreateVueGridLayer = (
   GridLayer: typeof L.GridLayer,
   DomUtil: typeof L.DomUtil,
   Util: typeof L.Util,
-  childRenderer: VueGridLayerTileRenderer
+  childRenderer: VueGridLayerTileRenderer,
 ) =>
   GridLayer.extend({
     initialize(options: L.GridLayerOptions) {

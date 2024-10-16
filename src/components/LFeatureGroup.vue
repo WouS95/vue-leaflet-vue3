@@ -12,18 +12,18 @@ import {
 import {
   featureGroupProps,
   setupFeatureGroup,
-} from "@src/functions/featureGroup";
-import { render } from "@src/functions/layer";
+} from "@/functions/featureGroup";
+import { render } from "@/functions/layer";
 import {
   AddLayerInjection,
   UseGlobalLeafletInjection,
-} from "@src/types/injectionKeys";
+} from "@/types/injectionKeys";
 import {
   WINDOW_OR_GLOBAL,
   assertInject,
   propsBinder,
   remapEvents,
-} from "@src/utils.js";
+} from "@/utils.js";
 
 export default defineComponent({
   props: featureGroupProps,

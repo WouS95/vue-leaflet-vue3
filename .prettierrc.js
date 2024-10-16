@@ -1,5 +1,5 @@
 module.exports = {
-  "importOrder": ["^@src/(.*)$", "^[./]" ],
-  "importOrderSeparation": true, 
-  "importOrderSortSpecifiers": true 
-}
+  importOrder: ["^@/(.*)$", "^[./]"],
+  importOrderSeparation: true,
+  importOrderSortSpecifiers: true,
+};

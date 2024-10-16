@@ -1,7 +1,7 @@
 import type L from "leaflet";
 import type { PropType } from "vue";
 
-import { propsToLeafletOptions } from "@src/utils";
+import { propsToLeafletOptions } from "@/utils";
 
 import { layerProps, setupLayer } from "./layer";
 
@@ -50,13 +50,13 @@ export const setupImageOverlay = (props, leafletRef, context) => {
   const { options: layerOptions, methods: layerMethods } = setupLayer(
     props,
     leafletRef,
-    context
+    context,
   );
 
   const options = propsToLeafletOptions<L.ImageOverlayOptions>(
     props,
     imageOverlayProps,
-    layerOptions
+    layerOptions,
   );
 
   const methods = {

@@ -2,7 +2,7 @@ import type { GeoJsonObject } from "geojson";
 import type L from "leaflet";
 import type { PropType } from "vue";
 
-import { propsToLeafletOptions } from "@src/utils";
+import { propsToLeafletOptions } from "@/utils";
 
 import { layerGroupProps, setupLayerGroup } from "./layerGroup";
 
@@ -22,13 +22,13 @@ export const setupGeoJSON = (props, leafletRef, context) => {
   const { options: layerOptions, methods: layerGroupMethods } = setupLayerGroup(
     props,
     leafletRef,
-    context
+    context,
   );
 
   const options = propsToLeafletOptions<L.GeoJSONOptions>(
     props,
     geoJSONProps,
-    layerOptions
+    layerOptions,
   );
   if (Object.prototype.hasOwnProperty.call(props, "optionsStyle")) {
     options.style = props.optionsStyle;

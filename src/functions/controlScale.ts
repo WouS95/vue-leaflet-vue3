@@ -1,6 +1,6 @@
 import type L from "leaflet";
 
-import { propsToLeafletOptions } from "@src/utils";
+import { propsToLeafletOptions } from "@/utils";
 
 import { controlProps, setupControl } from "./control";
 
@@ -26,13 +26,13 @@ export const controlScaleProps = {
 export const setupControlScale = (props, leafletRef) => {
   const { options: controlOptions, methods: controlMethods } = setupControl(
     props,
-    leafletRef
+    leafletRef,
   );
 
   const options = propsToLeafletOptions<L.Control.ScaleOptions>(
     props,
     controlScaleProps,
-    controlOptions
+    controlOptions,
   );
 
   return { options, methods: controlMethods };

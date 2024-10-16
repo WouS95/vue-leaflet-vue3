@@ -1,7 +1,7 @@
 import type L from "leaflet";
 import type { PropType } from "vue";
 
-import { propsToLeafletOptions } from "@src/utils";
+import { propsToLeafletOptions } from "@/utils";
 
 import { polygonProps, setupPolygon } from "./polygon";
 
@@ -21,13 +21,13 @@ export const setupRectangle = (props, leafletRef, context) => {
   const { options: polygonOptions, methods: polygonMethods } = setupPolygon(
     props,
     leafletRef,
-    context
+    context,
   );
 
   const options = propsToLeafletOptions<L.PolylineOptions>(
     props,
     rectangleProps,
-    polygonOptions
+    polygonOptions,
   );
 
   const methods = {

@@ -9,18 +9,18 @@ import {
   ref,
 } from "vue";
 
-import { render } from "@src/functions/popper";
-import { setupTooltip, tooltipProps } from "@src/functions/tooltip";
+import { render } from "@/functions/popper";
+import { setupTooltip, tooltipProps } from "@/functions/tooltip";
 import {
   BindTooltipInjection,
   UseGlobalLeafletInjection,
-} from "@src/types/injectionKeys";
+} from "@/types/injectionKeys";
 import {
   WINDOW_OR_GLOBAL,
   assertInject,
   propsBinder,
   remapEvents,
-} from "@src/utils.js";
+} from "@/utils.js";
 
 /**
  * Display a tooltip on the map

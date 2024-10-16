@@ -1,8 +1,8 @@
 import type L from "leaflet";
 import { onBeforeUnmount } from "vue";
 
-import { RemoveLayerInjection } from "@src/types/injectionKeys";
-import { assertInject, propsToLeafletOptions } from "@src/utils";
+import { RemoveLayerInjection } from "@/types/injectionKeys";
+import { assertInject, propsToLeafletOptions } from "@/utils";
 
 import {
   interactiveLayerProps,
@@ -61,7 +61,7 @@ export const setupPath = (props, leafletRef, context) => {
   const options = propsToLeafletOptions<L.PathOptions>(
     props,
     pathProps,
-    interactiveLayerOptions
+    interactiveLayerOptions,
   );
 
   const removeLayer = assertInject(RemoveLayerInjection);

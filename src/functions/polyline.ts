@@ -1,7 +1,7 @@
 import type L from "leaflet";
 import type { PropType } from "vue";
 
-import { propsToLeafletOptions } from "@src/utils";
+import { propsToLeafletOptions } from "@/utils";
 
 import { pathProps, setupPath } from "./path";
 
@@ -25,13 +25,13 @@ export const setupPolyline = (props, leafletRef, context) => {
   const { options: pathOptions, methods: pathMethods } = setupPath(
     props,
     leafletRef,
-    context
+    context,
   );
 
   const options = propsToLeafletOptions<L.PolylineOptions>(
     props,
     polylineProps,
-    pathOptions
+    pathOptions,
   );
 
   const methods = {

@@ -1,29 +1,14 @@
 <template>
-  <l-map
-    ref="map"
-    v-model:zoom="zoom"
-    :crs="crs"
-    :center="[height / 2, width / 2]"
-    :minZoom="-5"
-  >
+  <l-map ref="map" v-model:zoom="zoom" :crs="crs" :center="[height / 2, width / 2]" :minZoom="-5">
     <l-image-overlay :url="imageOverlayUrl" :bounds="bounds"></l-image-overlay>
 
-    <l-marker
-      v-for="(marker, idx) in markers"
-      :key="idx"
-      :lat-lng="marker.coordinates"
-      ><l-popup>{{ idx }}</l-popup></l-marker
-    >
+    <l-marker v-for="(marker, idx) in markers" :key="idx" :lat-lng="marker.coordinates"><l-popup>{{ idx
+        }}</l-popup></l-marker>
   </l-map>
 
   <!-- Map Settings -->
   <label for="imageOverlayUrl">Url to render: </label>
-  <input
-    type="text"
-    id="imageOverlayUrl"
-    placeholder="Url for image overlay"
-    v-model="imageOverlayUrl"
-  />
+  <input type="text" id="imageOverlayUrl" placeholder="Url for image overlay" v-model="imageOverlayUrl" />
   <!-- Bounds settings -->
   <label for="width">Width: </label>
   <input type="number" id="width" placeholder="Width" v-model="width" />
@@ -46,7 +31,7 @@ import type L from "leaflet";
 import { CRS } from "leaflet/dist/leaflet-src.esm";
 import { computed, ref } from "vue";
 
-import { LImageOverlay, LMap, LMarker, LPopup } from "@src/components";
+import { LImageOverlay, LMap, LMarker, LPopup } from "@/components";
 
 export default {
   components: {

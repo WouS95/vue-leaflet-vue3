@@ -2,11 +2,11 @@ import { flushPromises, shallowMount } from "@vue/test-utils";
 import "leaflet";
 import { beforeEach, describe, expect, it, vi } from "vitest";
 
-import LControlAttribution from "@src/components/LControlAttribution.vue";
+import LControlAttribution from "@/components/LControlAttribution.vue";
 import {
   RegisterControlInjection,
   UseGlobalLeafletInjection,
-} from "@src/types/injectionKeys";
+} from "@/types/injectionKeys";
 
 describe.each([true, false])("LControlAttribution", (useGlobalLeaflet) => {
   const mockRegisterControl = vi.fn();

@@ -8,8 +8,8 @@ import {
   RemoveLayerInjection,
   UnbindPopupInjection,
   UnbindTooltipInjection,
-} from "@src/types/injectionKeys";
-import { assertInject, isFunction, propsToLeafletOptions } from "@src/utils";
+} from "@/types/injectionKeys";
+import { assertInject, isFunction, propsToLeafletOptions } from "@/utils";
 
 import type { LayerType } from "../types/enums/LayerType";
 import { componentProps, setupComponent } from "./component";
@@ -40,7 +40,7 @@ export const layerProps = {
 export const setupLayer = <T extends L.Layer>(
   props,
   leafletRef: Ref<T>,
-  context
+  context,
 ) => {
   const addLayer = assertInject(AddLayerInjection);
   const removeLayer = assertInject(RemoveLayerInjection);
@@ -50,7 +50,7 @@ export const setupLayer = <T extends L.Layer>(
   const options = propsToLeafletOptions<L.LayerOptions>(
     props,
     layerProps,
-    componentOptions
+    componentOptions,
   );
 
   const addThisLayer = () => addLayer({ leafletObject: leafletRef.value });
@@ -90,7 +90,7 @@ export const setupLayer = <T extends L.Layer>(
     bindPopup(leafletObject) {
       if (!leafletRef.value || !isFunction(leafletRef.value.bindPopup)) {
         console.warn(
-          "Attempt to bind popup before bindPopup method available on layer."
+          "Attempt to bind popup before bindPopup method available on layer.",
         );
 
         return;
@@ -101,7 +101,7 @@ export const setupLayer = <T extends L.Layer>(
     bindTooltip(leafletObject) {
       if (!leafletRef.value || !isFunction(leafletRef.value.bindTooltip)) {
         console.warn(
-          "Attempt to bind tooltip before bindTooltip method available on layer."
+          "Attempt to bind tooltip before bindTooltip method available on layer.",
         );
 
         return;

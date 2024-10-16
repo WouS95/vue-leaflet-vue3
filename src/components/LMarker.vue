@@ -12,19 +12,19 @@ import {
   ref,
 } from "vue";
 
-import { render } from "@src/functions/layer";
+import { render } from "@/functions/layer";
 import {
   markerProps,
   setupMarker,
   shouldBlankIcon,
-} from "@src/functions/marker";
+} from "@/functions/marker";
 import {
   AddLayerInjection,
   CanSetParentHtmlInjection,
   SetIconInjection,
   SetParentHtmlInjection,
   UseGlobalLeafletInjection,
-} from "@src/types/injectionKeys";
+} from "@/types/injectionKeys";
 import {
   WINDOW_OR_GLOBAL,
   assertInject,
@@ -32,7 +32,7 @@ import {
   isFunction,
   propsBinder,
   remapEvents,
-} from "@src/utils.js";
+} from "@/utils.js";
 
 /**
  * Marker component, lets you add and personalize markers on the map

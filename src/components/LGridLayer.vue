@@ -16,17 +16,17 @@ import {
   type VueGridLayerTileRenderer,
   gridLayerProps,
   setupGridLayer,
-} from "@src/functions/gridLayer";
+} from "@/functions/gridLayer";
 import {
   AddLayerInjection,
   UseGlobalLeafletInjection,
-} from "@src/types/injectionKeys";
+} from "@/types/injectionKeys";
 import {
   WINDOW_OR_GLOBAL,
   assertInject,
   propsBinder,
   remapEvents,
-} from "@src/utils.js";
+} from "@/utils.js";
 
 export default defineComponent({
   props: {

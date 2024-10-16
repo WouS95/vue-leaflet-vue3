@@ -1,11 +1,8 @@
 import type L from "leaflet";
 import { provide } from "vue";
 
-import {
-  AddLayerInjection,
-  RemoveLayerInjection,
-} from "@src/types/injectionKeys";
-import { propsToLeafletOptions } from "@src/utils";
+import { AddLayerInjection, RemoveLayerInjection } from "@/types/injectionKeys";
+import { propsToLeafletOptions } from "@/utils";
 
 import { layerProps, setupLayer } from "./layer";
 
@@ -17,13 +14,13 @@ export const setupLayerGroup = (props, leafletRef, context) => {
   const { options: layerOptions, methods: layerMethods } = setupLayer(
     props,
     leafletRef,
-    context
+    context,
   );
 
   const options = propsToLeafletOptions<L.InteractiveLayerOptions>(
     props,
     layerGroupProps,
-    layerOptions
+    layerOptions,
   );
 
   const methods = {

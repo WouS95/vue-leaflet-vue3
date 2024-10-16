@@ -9,18 +9,18 @@ import {
   ref,
 } from "vue";
 
-import { render } from "@src/functions/layer";
-import { layerGroupProps, setupLayerGroup } from "@src/functions/layerGroup";
+import { render } from "@/functions/layer";
+import { layerGroupProps, setupLayerGroup } from "@/functions/layerGroup";
 import {
   AddLayerInjection,
   UseGlobalLeafletInjection,
-} from "@src/types/injectionKeys";
+} from "@/types/injectionKeys";
 import {
   WINDOW_OR_GLOBAL,
   assertInject,
   propsBinder,
   remapEvents,
-} from "@src/utils.js";
+} from "@/utils.js";
 
 export default defineComponent({
   props: layerGroupProps,

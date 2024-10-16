@@ -9,18 +9,18 @@ import {
   ref,
 } from "vue";
 
-import { circleProps, setupCircle } from "@src/functions/circle";
-import { render } from "@src/functions/layer";
+import { circleProps, setupCircle } from "@/functions/circle";
+import { render } from "@/functions/layer";
 import {
   AddLayerInjection,
   UseGlobalLeafletInjection,
-} from "@src/types/injectionKeys";
+} from "@/types/injectionKeys";
 import {
   WINDOW_OR_GLOBAL,
   assertInject,
   propsBinder,
   remapEvents,
-} from "@src/utils.js";
+} from "@/utils.js";
 
 /**
  * Circle component, lets you add and personalize circles on the map

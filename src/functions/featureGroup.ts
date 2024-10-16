@@ -1,6 +1,6 @@
 import type L from "leaflet";
 
-import { propsToLeafletOptions } from "@src/utils";
+import { propsToLeafletOptions } from "@/utils";
 
 import { layerGroupProps, setupLayerGroup } from "./layerGroup";
 
@@ -12,13 +12,13 @@ export const setupFeatureGroup = (props, leafletRef, context) => {
   const { options: layerOptions, methods: layerGroupMethods } = setupLayerGroup(
     props,
     leafletRef,
-    context
+    context,
   );
 
   const options = propsToLeafletOptions<L.InteractiveLayerOptions>(
     props,
     featureGroupProps,
-    layerOptions
+    layerOptions,
   );
 
   const methods = {

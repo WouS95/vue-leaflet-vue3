@@ -12,12 +12,12 @@ import {
 import {
   controlLayersProps,
   setupControlLayers,
-} from "@src/functions/controlLayers";
+} from "@/functions/controlLayers";
 import {
   RegisterLayerControlInjection,
   UseGlobalLeafletInjection,
-} from "@src/types/injectionKeys";
-import { WINDOW_OR_GLOBAL, assertInject, propsBinder } from "@src/utils.js";
+} from "@/types/injectionKeys";
+import { WINDOW_OR_GLOBAL, assertInject, propsBinder } from "@/utils.js";
 
 export default defineComponent({
   name: "LControlLayers",

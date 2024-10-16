@@ -1,6 +1,6 @@
 import type L from "leaflet";
 
-import { propsToLeafletOptions } from "@src/utils";
+import { propsToLeafletOptions } from "@/utils";
 
 import { setupTileLayer, tileLayerProps } from "./tileLayer";
 
@@ -39,7 +39,7 @@ export const setupWMSTileLayer = (props, leafletRef, context) => {
   const options = propsToLeafletOptions<L.WMSOptions>(
     props,
     wmsTileLayerProps,
-    tileLayerOptions
+    tileLayerOptions,
   );
 
   return {

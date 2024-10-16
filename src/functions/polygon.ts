@@ -1,6 +1,6 @@
 import type L from "leaflet";
 
-import { propsToLeafletOptions } from "@src/utils";
+import { propsToLeafletOptions } from "@/utils";
 
 import { polylineProps, setupPolyline } from "./polyline";
 
@@ -12,13 +12,13 @@ export const setupPolygon = (props, leafletRef, context) => {
   const { options: polylineOptions, methods: polylineMethods } = setupPolyline(
     props,
     leafletRef,
-    context
+    context,
   );
 
   const options = propsToLeafletOptions<L.PolylineOptions>(
     props,
     polygonProps,
-    polylineOptions
+    polylineOptions,
   );
 
   const methods = {

@@ -12,18 +12,18 @@ import {
 import {
   circleMarkerProps,
   setupCircleMarker,
-} from "@src/functions/circleMarker";
-import { render } from "@src/functions/layer";
+} from "@/functions/circleMarker";
+import { render } from "@/functions/layer";
 import {
   AddLayerInjection,
   UseGlobalLeafletInjection,
-} from "@src/types/injectionKeys";
+} from "@/types/injectionKeys";
 import {
   WINDOW_OR_GLOBAL,
   assertInject,
   propsBinder,
   remapEvents,
-} from "@src/utils.js";
+} from "@/utils.js";
 
 /**
  * Circle Marker component, lets you add and personalize circle markers on the map

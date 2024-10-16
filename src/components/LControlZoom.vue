@@ -9,12 +9,12 @@ import {
   ref,
 } from "vue";
 
-import { controlZoomProps, setupControlZoom } from "@src/functions/controlZoom";
+import { controlZoomProps, setupControlZoom } from "@/functions/controlZoom";
 import {
   RegisterControlInjection,
   UseGlobalLeafletInjection,
-} from "@src/types/injectionKeys";
-import { WINDOW_OR_GLOBAL, assertInject, propsBinder } from "@src/utils.js";
+} from "@/types/injectionKeys";
+import { WINDOW_OR_GLOBAL, assertInject, propsBinder } from "@/utils.js";
 
 export default defineComponent({
   name: "LControlZoom",

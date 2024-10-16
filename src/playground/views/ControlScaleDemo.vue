@@ -1,15 +1,12 @@
 <template>
   <l-map ref="map" :zoom="2" :center="[47.41322, -1.219482]">
-    <l-tile-layer
-      url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-      layer-type="base"
-      name="OpenStreetMap"
-    ></l-tile-layer>
+    <l-tile-layer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" layer-type="base"
+      name="OpenStreetMap"></l-tile-layer>
     <l-control-scale position="bottomleft" />
   </l-map>
 </template>
 <script lang="ts">
-import { LControlScale, LMap, LTileLayer } from "@src/components";
+import { LControlScale, LMap, LTileLayer } from "@/components";
 
 export default {
   components: {

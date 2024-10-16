@@ -15,20 +15,20 @@ import {
   ref,
 } from "vue";
 
-import { componentProps, setupComponent } from "@src/functions/component";
+import { componentProps, setupComponent } from "@/functions/component";
 import {
   AddLayerInjection,
   RegisterControlInjection,
   RegisterLayerControlInjection,
   RemoveLayerInjection,
   UseGlobalLeafletInjection,
-} from "@src/types/injectionKeys";
+} from "@/types/injectionKeys";
 import type {
   IControlDefinition,
   ILayerDefinition,
   IMapBlueprint,
   IMapOptions,
-} from "@src/types/interfaces";
+} from "@/types/interfaces";
 import {
   type Data,
   WINDOW_OR_GLOBAL,
@@ -40,7 +40,7 @@ import {
   remapEvents,
   resetWebpackIcon,
   updateLeafletWrapper,
-} from "@src/utils.js";
+} from "@/utils.js";
 
 type StyleableAttrs = Data & { style: Data };
 

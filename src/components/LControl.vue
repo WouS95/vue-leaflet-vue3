@@ -13,12 +13,12 @@ import {
   controlProps,
   renderLControl,
   setupControl,
-} from "@src/functions/control";
+} from "@/functions/control";
 import {
   RegisterControlInjection,
   UseGlobalLeafletInjection,
-} from "@src/types/injectionKeys";
-import { WINDOW_OR_GLOBAL, assertInject, propsBinder } from "@src/utils.js";
+} from "@/types/injectionKeys";
+import { WINDOW_OR_GLOBAL, assertInject, propsBinder } from "@/utils.js";
 
 export default defineComponent({
   name: "LControl",

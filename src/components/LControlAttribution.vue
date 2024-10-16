@@ -12,12 +12,12 @@ import {
 import {
   controlAttributionProps,
   setupControlAttribution,
-} from "@src/functions/controlAttribution";
+} from "@/functions/controlAttribution";
 import {
   RegisterControlInjection,
   UseGlobalLeafletInjection,
-} from "@src/types/injectionKeys";
-import { WINDOW_OR_GLOBAL, assertInject, propsBinder } from "@src/utils.js";
+} from "@/types/injectionKeys";
+import { WINDOW_OR_GLOBAL, assertInject, propsBinder } from "@/utils.js";
 
 export default defineComponent({
   name: "LControlAttribution",
